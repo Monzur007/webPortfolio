@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>crickbd</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <body>
+    <section class="d-flex justify-content-center p-3 mb-2 bg-success text-white">
+        <div>
+            <img src="images/logoCric.png" alt="">
+        </div>
+       <div>
+        <h1 class="text-center">Our Team: Bangladesh</h1>
+        <p>The Bangladesh men's national cricket team, popularly known as The Tigers, is administered by the Bangladesh Cricket Board.</p>
+       </div>
+       <div>
+        <img src="images/Bangladesh.jfif" alt="">
+       </div>
+    </section>
+<section id="playerCards" class="p-3 mb-2 bg-danger text-white">
+  <section class="d-flex justify-content-center">
+    <div class="card" style="width: 18rem;">
+      <img src="Images/Mashrafe.jfif" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 id="mash" class="card-title text-center text-dark">Mashrafe</h5>
+        <button id="btn-mash" class="btn btn-primary d-grid gap-2 col-6 mx-auto" type="submit" onclick="myFunction()">Select</button>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="Images/Mahmudullah.jfif" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class=" add card-title text-center text-dark">Mahmudullah</h5>
+        <button id="btn-mahmud" class="btn btn-primary d-grid gap-2 col-6 mx-auto" type="submit" onclick="myFunction2()">Select</button>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="Images/Shakib..jfif" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-center text-dark">Shakib</h5>
+        <button id="btn-shakib" class="btn btn-primary d-grid gap-2 col-6 mx-auto" type="submit" onclick="myFunction3()">Select</button>
+      </div>
+    </div>
+    <section class="border border-dark" style="width: 18rem;">
+      <div id="players">
+        <h4 class="text-center">Selected Players</h4>
+           
+      </div>
+      <p id="pl1"></p>
+      <p id="pl2"></p>
+      <p id="pl3"></p>
+      <p id="pl4"></p>
+      <p id="pl5"></p>
+      <p id="pl6"></p>
+
+
+    </div>
+  
+   </div>
+    </div>
+    </section>
+  </section>
+  <section class="d-flex justify-content-center">
+    <div class="card" style="width: 18rem;">
+      <img src="Images/mustafiz..jfif" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-center text-dark">Mustafiz</h5>
+        <button id="btn-mustafiz" class="btn btn-primary d-grid gap-2 col-6 mx-auto" type="submit" onclick="myFunction4()">Select</button>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem; height: 18rem;">
+      <img src="Images/Rubel.jfif" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class=" add card-title text-center text-dark">Rubel</h5>
+        <button id="btn-rubel" class="btn btn-primary d-grid gap-2 col-6 mx-auto" type="submit" onclick="myFunction5()">Select</button>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="Images/Tamim.jfif" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title text-center text-dark">Tamim</h5>
+        <button id="btn-tamim" class="btn btn-primary d-grid gap-2 col-6 mx-auto" type="submit" onclick="myFunction6()">Select</button>
+      </div>
+    </div>
+    <section class="border border-dark" style="width: 18rem;">
+      <div>
+        <h4 class="text-center">Budget</h4>
+        <span> Per Player</span>
+        <input id="deposit-field" type="text">
+        <button id="btn-calculate" class="btn btn-primary d-grid gap-2 col-6 mx-auto my-3" type="submit">Calculate</button>
+</div>
+        <div class="container-fluid">
+  <form>
+    Player Expenses: <input type="text" id = "playerExpenses" /><br>
+     Manager: <input id="manager" class="my-3" type="text" /><br>
+    Coach: <input id="coach" class="my-3" type="text" /><br>
+    </div>
+    <button id="btn-total" class="btn btn-primary d-grid gap-2 col-6 mx-auto my-3" type="submit" onclick = "totalBy()">Total</button>
+    </form>
+        <p id="result"></p>   
+    
+</div>
+        
+      
+  
+    </section>
+  </section>
+</section>
+    
+      <footer class="p-3 mb-2 bg-success text-white">
+        <hr>
+<p class="text-center">Copyright@2022. All Rights Reserved.</p>
+      </footer> 
+ <script>
+function totalBy(){
+  let a, b, c, sum;
+  a = parseInt(document.getElementById("playerExpenses").value);
+ b = parseInt(document.getElementById("manager").value);
+  c = parseInt(document.getElementById("coach").value);
+ sum = a + b + c;
+  document.getElementById("result").value = sum;
+}
+
+        function myFunction() {
+          document.getElementById("pl1").innerHTML = "***1.Mashrafe";
+}
+   
+          function myFunction2() {
+    document.getElementById("pl2").innerHTML = "***2.Mahmudullah";
+  }
+       
+                  function myFunction3() {
+            document.getElementById("pl3").innerHTML = "***3.Shakib";
+          }
+               
+                              function myFunction4() {
+                        document.getElementById("pl4").innerHTML = "***4.Mustafiz";
+                      }
+                          
+                                  function myFunction5() {
+                            document.getElementById("pl5").innerHTML = "***5.Rubel";
+                          }
+                               
+                                      function myFunction6() {
+                                document.getElementById("pl6").innerText = "***6.Tamim";
+                              }
+                                    </script>
+   <script src="js/crickbd.js"></script>
+  </body>
+</html>
